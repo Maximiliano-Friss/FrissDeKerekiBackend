@@ -9,7 +9,7 @@
     "start": "NODE_ENV=DEV||set NODE_ENV=DEV && node server.js",
     "prod1": "NODE_ENV=PROD_MONGO||set NODE_ENV=PROD_MONGO&& node server.js",
     "prod2": "NODE_ENV=PROD_FIREBASE||set NODE_ENV=PROD_FIREBASE&& node server.js"
-    },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Maximiliano-Friss/FrissDeKerekiBackend.git"
