@@ -1,5 +1,5 @@
-import ProductsDaoMongo from "../DAOS/productsDAOMongo.js";
-import ProductsDaoFile from "../DAOS/productsDAOFile.js";
+import ProductsDaoMongo from "../DAOS/productsDaoMongo.js";
+import ProductsDaoFile from "../DAOS/productsDaoFile.js";
 import ProductsDaoFirebase from "../DAOS/productsDaoFirebase.js";
 import {URL} from "../databases/mongo/mongoConfig.js";
 
