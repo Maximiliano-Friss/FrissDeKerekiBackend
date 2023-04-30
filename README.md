@@ -12,16 +12,20 @@ https://frissdekerekibackend-production.up.railway.app/
 
 En el proyecto existen cuatro tipos de bases de datos definidas con patrones de repositorio y para las cuales se emplean diferentes métodos de persistencia.
 
-- **CARRITOS**
+- **CARRITOS**  
+
     MongoDB
 
-- **USUARIOS**
+- **USUARIOS**  
+
     MongoDB
 
-- **MENSAJES**
+- **MENSAJES**  
+
     Firebase
 
-- **PRODUCTOS** 
+- **PRODUCTOS**  
+
     En este caso se proveen diferentes opciones según el valor de la variable NODE_ENV. Esta se define según el script que se ejecute en la línea de comandos.
     1. MongoDB - (npm run start)
     2. Firebase - (npm run prod2)
