@@ -19,8 +19,8 @@ export const localRegisterStrategy = new LocalStrategy({
         try {
             const user = await usersRepo.findUser(email)
             if(user) {
-                loggerErrorController('Ya existe un usuario registrado con ese nombre.')
-                return done(null, false, { message: 'Ya existe un usuario registrado con ese nombre.'})
+                loggerErrorController('Ya existe un usuario registrado con ese email.')
+                return done(null, false, { message: 'Ya existe un usuario registrado con ese email.'})
             }
             const newCartId = await cartsRepo.saveCart()
             const newUser = {email, password, nombre: req.body.nombre, direccion: req.body.direccion, edad: req.body.edad, telefono: req.body.telefono, avatar: path.join(`uploads`, req.file.filename), cartId: newCartId}
@@ -30,7 +30,7 @@ export const localRegisterStrategy = new LocalStrategy({
             await transporter.sendMail(
                 {
                     from: 'Ecommerce Coderhouse <no-reply@example.com>',
-                    to: `<${process.env.MAIL_ADRESS}>`,
+                    to: `<${process.env.MAIL_ADDRESS}>`,
                     subject: 'Nuevo registro',
                     text: JSON.stringify(noPassUser)
                 }
