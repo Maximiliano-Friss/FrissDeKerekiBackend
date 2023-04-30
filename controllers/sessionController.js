@@ -1,6 +1,6 @@
 import MongoStore from 'connect-mongo';
 const advancedOptions = {useNewUrlParser: true, useUnifiedTopology: true}
-import {URL} from '../persistence/databases/mongo/mongoConfig.js'
+import {URL} from '../persistencia/databases/mongo/mongoConfig.js'
 import session from 'express-session';
 
 export function sessionController() {

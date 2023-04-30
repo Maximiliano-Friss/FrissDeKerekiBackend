@@ -13,15 +13,15 @@ class ProductsDaoFile {
         try {
             let dataToSave = [];
             
-            if (fs.existsSync('./persistence/databases/files/products.txt')) {
-                const currentData = await fs.promises.readFile('./persistence/databases/files/products.txt', 'utf-8');
+            if (fs.existsSync('./persistencia/databases/files/products.txt')) {
+                const currentData = await fs.promises.readFile('./persistencia/databases/files/products.txt', 'utf-8');
                 if (currentData !== '') {
                     dataToSave = JSON.parse(currentData);
                 }
             }
             product.id = this.randomId(10);
             dataToSave.push(product);
-            await fs.promises.writeFile('./persistence/databases/files/products.txt', JSON.stringify(dataToSave, null, 2));
+            await fs.promises.writeFile('./persistencia/databases/files/products.txt', JSON.stringify(dataToSave, null, 2));
             loggerController('Se guardó un nuevo producto')
             return transformProductsToDTO(product)
         }
@@ -32,7 +32,7 @@ class ProductsDaoFile {
 
     async getById(id) {
         try {
-            const currentData = await fs.promises.readFile('./persistence/databases/files/products.txt', 'utf-8');
+            const currentData = await fs.promises.readFile('./persistencia/databases/files/products.txt', 'utf-8');
             const currentDataJSON = JSON.parse(currentData);
             const singleProduct = currentDataJSON.find(element => element.id == id)
             if (singleProduct){
@@ -50,7 +50,7 @@ class ProductsDaoFile {
 
     async getAll(categoria) {
         try {
-            const currentData = await fs.promises.readFile('./persistence/databases/files/products.txt', 'utf-8');
+            const currentData = await fs.promises.readFile('./persistencia/databases/files/products.txt', 'utf-8');
             const currentDataJSON = JSON.parse(currentData);
             loggerController('Se buscan todos los productos')
             if (categoria) {
@@ -68,13 +68,13 @@ class ProductsDaoFile {
 
     async update(id, updProduct) {
         try{
-            const currentData = await fs.promises.readFile('./persistence/databases/files/products.txt', 'utf-8');
+            const currentData = await fs.promises.readFile('./persistencia/databases/files/products.txt', 'utf-8');
             const currentDataJSON = JSON.parse(currentData);
             const index = currentDataJSON.findIndex((product) => product.id == id)
             if(index !== -1) {
                 const updatedProduct = {...currentDataJSON[index], ...updProduct};
                 currentDataJSON[index] = updatedProduct;
-                await fs.promises.writeFile('./persistence/databases/files/products.txt', JSON.stringify(currentDataJSON, null, 2));
+                await fs.promises.writeFile('./persistencia/databases/files/products.txt', JSON.stringify(currentDataJSON, null, 2));
                 loggerController(`Se actualizó el producto con id ${id}`)
                 return transformProductsToDTO(updatedProduct);
             } else {
@@ -88,13 +88,13 @@ class ProductsDaoFile {
 
     async deleteById(id) {
         try {
-            const currentData = await fs.promises.readFile('./persistence/databases/files/products.txt', 'utf-8');
+            const currentData = await fs.promises.readFile('./persistencia/databases/files/products.txt', 'utf-8');
             const currentDataJSON = JSON.parse(currentData);
             const productToDelete = currentDataJSON.find(element => element.id == id)
             const index = currentDataJSON.findIndex((product) => product.id == id)
             if(index !== -1) {
                 const newCurrentDataJSON = currentDataJSON.filter(element => element.id != id);
-                await fs.promises.writeFile('./persistence/databases/files/products.txt', JSON.stringify(newCurrentDataJSON, null, 2));
+                await fs.promises.writeFile('./persistencia/databases/files/products.txt', JSON.stringify(newCurrentDataJSON, null, 2));
                 loggerController(`Se eliminó el producto con id ${id}`)
                 return productToDelete
             } else {

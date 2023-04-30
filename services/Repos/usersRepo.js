@@ -1,5 +1,5 @@
-import UserModel from '../../persistence/models/userModel.js';
-import UsersDaoMongo from '../../persistence/DAOS/usersDaoMongo.js';
+import UserModel from '../../persistencia/models/userModel.js';
+import UsersDaoMongo from '../../persistencia/DAOS/usersDaoMongo.js';
 
 export default class UsersRepo {
     dao

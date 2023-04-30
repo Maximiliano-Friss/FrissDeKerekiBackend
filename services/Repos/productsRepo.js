@@ -1,5 +1,5 @@
-import ProductsFactory from '../../persistence/factories/productFactory.js'
-import ProductModel from '../../persistence/models/productModel.js';
+import ProductsFactory from '../../persistencia/factories/productFactory.js'
+import ProductModel from '../../persistencia/models/productModel.js';
 
 export default class ProductsRepo {
     dao
