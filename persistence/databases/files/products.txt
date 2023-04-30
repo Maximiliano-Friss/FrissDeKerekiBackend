@@ -1,0 +1,50 @@
+[
+  {
+    "nombre": "Bajo",
+    "precio": "400",
+    "foto": "https://f.fcdn.app/imgs/a6f65f/todomusica.com.uy/tomuuy/92fe/original/catalogo/1221320770_1221320770_1/2000-2000/bajo-electrico-fender-squier-affinity-pj-bass-cfm-bajo-electrico-fender-squier-affinity-pj-bass-cfm.jpg",
+    "categoria": "cuerda",
+    "descripcion": "Para tocar Seven Nation Army de The White Stripes",
+    "id": "TnAq1Y2O2G"
+  },
+  {
+    "nombre": "Guitarra acústica",
+    "precio": "380",
+    "foto": "https://www.culturasonora.es/wp-content/uploads/2019/09/Yamaha-C40-1.jpg",
+    "categoria": "cuerda",
+    "descripcion": "Para tocar Ojalá de Silvio Rodríguez",
+    "id": "OQZMQyZeNd"
+  },
+  {
+    "nombre": "Saxofón",
+    "precio": "510",
+    "foto": "https://multisononline.com/blog/wp-content/uploads/2021/02/saxo-tenor.jpg",
+    "categoria": "viento",
+    "descripcion": "Para tocar Careless Whisper de George Michael",
+    "id": "9v47VfxRsB"
+  },
+  {
+    "nombre": "Flauta traversa",
+    "precio": "460",
+    "foto": "https://f.fcdn.app/imgs/4c88fe/www.palaciodelamusica.com.uy/pmusuy/3b48/original/catalogo/FT6456-FT6456_1/2000-2000/flauta-traversa-memphis-ft6456-flauta-traversa-memphis-ft6456.jpg",
+    "categoria": "viento",
+    "descripcion": "Para tocar Aqualung de Jethro Tull",
+    "id": "CEbG4r3OPa"
+  },
+  {
+    "nombre": "Batería",
+    "precio": "1200",
+    "foto": "https://http2.mlstatic.com/D_NQ_NP_616227-MCO32755801206_112019-O.jpg",
+    "categoria": "percusion",
+    "descripcion": "Para tocar Chop Suey de System of a Down",
+    "id": "Nm0ZtmAx7b"
+  },
+  {
+    "nombre": "Piano",
+    "precio": "2400",
+    "foto": "https://www.yamaha.com/en/musical_instrument_guide/common/images/piano/parts_viewer01.jpg",
+    "categoria": "percusion",
+    "descripcion": "Para tocar Rondo alla Turca de Mozart",
+    "id": "QEV4twcKW7"
+  }
+]

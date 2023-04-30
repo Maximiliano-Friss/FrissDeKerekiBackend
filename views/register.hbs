@@ -1,0 +1,37 @@
+{{!-- REGISTER FORM --}}
+<div class="container">
+    <h2 class="w-75 mt-3">Ingrese sus datos para registrarse</h2>
+    <form id="form-signup" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <input required placeholder="Ingresar email" id="email" class="form-control" type="email" name="email">
+        </div>
+        {{#if messages}}
+        <div class="form-group">
+            <p class="error-message">{{messages}}</p>
+        </div>
+        {{/if }}
+        <div class="form-group">
+            <input required placeholder="Ingresar contraseña" id="password" class="form-control" type="password" name="password">
+        </div>
+        <div class="form-group">
+            <input required placeholder="Ingresar nombre" id="nombre" class="form-control" type="text" name="nombre">
+        </div>
+        <div class="form-group">
+            <input required placeholder="Ingresar dirección" id="direccion" class="form-control" type="text" name="direccion">
+        </div>
+        <div class="form-group">
+            <input required placeholder="Ingresar edad" id="edad" class="form-control" type="number" name="edad">
+        </div>
+        <div class="form-group">
+            <input id="phone" name='phone' placeholder="Ingresar telefono" class="form-control" type="tel">
+        </div>
+        <div class="form-group">
+            <input id="telefono" name='telefono' class="form-control" type="hidden" value="">
+        </div>
+        <div class="form-group">
+            <input required placeholder="Ingresar avatar" id="avatar" class="form-control" type="file" name="avatar" value="Carga una foto">
+        </div>
+        <button type="submit" class="btn btn-success mt-3 mb-5">Registrarse</button>
+    </form>
+    <a class="btn btn-info" href="/api/ecommerce/login">Iniciar sesión</a>
+</div>

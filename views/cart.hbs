@@ -1,0 +1,29 @@
+<div class="container d-flex justify-content-between bg-success bg-gradient py-2">
+    <h1 class="text-light">Bienvenido {{userEmail}}</h1>
+</div>
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link" href="/api/ecommerce/">Inicio</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"  href="/api/ecommerce/profile">Mi perfil</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Carrito</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href='/api/ecommerce/logout'>Cerrar sesión</a>
+    </li>
+</ul>
+
+{{!-- PRODUCTOS EN CARRITO --}}
+<div class="w-75 mx-auto mt-5 border border-success">
+    <form id="prodList">
+    </form>
+    <input id='userEmail' type="hidden" value={{userEmail}}>
+    <div id="btn-container">
+        <button class="btn btn-info" id="makeOrder-btn">Realizar pedido</button>
+        <img id="loading-gif" src="/images/Loading_icon.gif" alt="Loading" hidden="hidden">
+    </div>
+</div>
+

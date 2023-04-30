@@ -1,0 +1,66 @@
+{{!-- MENSAJE DE BIENVENIDA --}}
+<div class="container d-flex justify-content-between bg-success bg-gradient py-2">
+    <h1 class="text-light">Bienvenido {{user}}</h1>
+</div>
+
+{{!-- NAVBAR --}}
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/api/ecommerce/profile">Mi perfil</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/api/ecommerce/cart">Carrito</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href='/api/ecommerce/logout'>Cerrar sesión</a>
+    </li>
+</ul>
+
+{{!-- LISTA PRODUCTOS --}}
+<div class="w-75 mx-auto mt-5 prodList">
+    <table class="table table-success" id="table1">
+        <tr class="h3"> <th>Nombre</th> <th>Precio</th> <th>Foto</th> <th>Agregar al carrito</th> </tr>
+    {{#each products}}
+        <tr>
+            <td>{{this.nombre}}</td>
+            <td>{{this.precio}}</td>
+            <td><img src="{{this.foto}}" width="200px" alt="Icono $${element.nombre}"></td>
+            <td><button class="btn addToCart-btn btn-warning" data-item="{{this.id}}">+1 al carrito</button></td>
+        </tr>
+    {{/each}}
+    </table>
+</div>
+
+{{!-- CHAT --}}
+<div class="w-75 mx-auto mt-5 prodList">
+    <h2>Chat</h2>
+    <form id="form2">
+        <div class="form-group">
+            <input placeholder="Ingresar email" id="email" class="form-control" type="email" name="email">
+        </div>
+        <div class="form-group">
+            <input placeholder="Ingresar nombre" id="nombre" class="form-control" type="text" name="nombre">
+        </div>
+        <div class="form-group">
+            <input placeholder="Ingresar apellido" id="apellido" class="form-control" type="text" name="apellido">
+        </div>
+        <div class="form-group">
+            <input placeholder="Ingresar edad" id="edad" class="form-control" type="number" name="edad">
+        </div>
+        <div class="form-group">
+            <input placeholder="Ingresar alias" id="alias" class="form-control" type="text" name="alias">
+        </div>
+        <div class="form-group">
+            <input placeholder="Ingresar URL de avatar" id="avatar" class="form-control" type="url" name="avatar">
+        </div>
+        <div class="form-group">
+            <input placeholder="Escribe algo..." id="mensaje" class="form-control" type="text" name="mensaje">
+        </div>
+        <button class="btn btn-success mt-3 mb-5">Enviar</button>
+    </form>
+    <div id="msg"></div>
+</div>
+

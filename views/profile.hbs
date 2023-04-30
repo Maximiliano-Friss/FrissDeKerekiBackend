@@ -1,0 +1,29 @@
+<div class="container d-flex justify-content-between bg-success bg-gradient py-2">
+    <h1 class="text-light">Bienvenido {{email}}</h1>
+</div>
+
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link" href="/api/ecommerce/">Inicio</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Mi perfil</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/api/ecommerce/cart">Carrito</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href='/api/ecommerce/logout'>Cerrar sesión</a>
+    </li>
+</ul>
+
+{{!-- INFO USUARIO --}}
+<div class="container mx-5 mt-5 border border-4 p-1">
+    <img src='http://{{url}}/{{avatar}}' alt="Avatar de {{nombre}}" class="avatar-profile">
+    <h5>Email<span class="badge bg-info">{{email}}</span></h5>
+    <h5>Nombre<span class="badge bg-info">{{nombre}}</span></h5>
+    <h5>Dirección<span class="badge bg-info">{{direccion}}</span></h5>
+    <h5>Edad<span class="badge bg-info">{{edad}}</span></h5>
+    <h5>Teléfono<span class="badge bg-info">{{telefono}}</span></h5>
+</div>
+

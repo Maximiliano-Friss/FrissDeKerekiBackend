@@ -1,0 +1,36 @@
+.alias {
+    color: blue;
+    font-weight: bold;
+    width: 25%;
+}
+
+.date {
+    color: brown;
+}
+
+.mensaje {
+    color: green;
+    font-style: italic;
+    width: 70%;
+}
+
+.mensaje-box {
+    margin: 0 0 0 10%;
+}
+
+.avatar-profile{
+    width: 100px;
+}
+
+.shorcut-icon{
+    width: 16px;
+}
+
+.error-message{
+    font-weight: bolder;
+	color: red;
+}
+
+#loading-gif{
+    width: 100px;
+}
