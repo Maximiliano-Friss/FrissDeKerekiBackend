@@ -1,0 +1,5 @@
+{
+  message: 'Ha ocurrido un error: Error en findUser',
+  level: 'error',
+  timestamp: '2023-04-30T21:00:31.637Z'
+}
