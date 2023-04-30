@@ -1,6 +1,6 @@
-import ProductsDaoMongo from "../DAOS/productsDaoMongo.js";
-import ProductsDaoFile from "../DAOS/productsDaoFile.js";
-import ProductsDaoFirebase from "../DAOS/productsDaoFirebase.js";
+import ProductsDaoMongo from "../DAOs/productsDaoMongo.js";
+import ProductsDaoFile from "../DAOs/productsDaoFile.js";
+import ProductsDaoFirebase from "../DAOs/productsDaoFirebase.js";
 import {URL} from "../databases/mongo/mongoConfig.js";
 
 let products

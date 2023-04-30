@@ -3,10 +3,7 @@ import {loggerReqController} from './loggerControllers.js'
 import dotenv from 'dotenv';
 dotenv.config()
 
-
-//CONTROLLERS
 export default class productsController {
-
     constructor(){
         this.serviceProducts = new ProductsRepo()
     }

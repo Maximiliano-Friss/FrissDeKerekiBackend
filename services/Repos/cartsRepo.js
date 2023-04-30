@@ -1,6 +1,6 @@
 import CartModel from "../../persistencia/models/cartModel.js";
 import ProductModel from "../../persistencia/models/productModel.js";
-import CartDaoMongo from "../../persistencia/DAOS/cartDaoMongo.js";
+import CartDaoMongo from "../../persistencia/DAOs/cartDaoMongo.js";
 
 export default class CartsRepo {
     dao

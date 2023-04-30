@@ -38,11 +38,10 @@ socket.on('productsInCart', function(data) {
     renderCart(data)
 })
 
-function emptyCart (data) {
+function emptyCart () {
     document.getElementById('prodList').innerHTML = `<h2>Compra realizada con éxito!</h2>`
     document.getElementById('btn-container').innerHTML = `
     <input type="button" class='btn btn-warning' onclick="location.href='/api/ecommerce';" value="Volver al inicio" />`
-
 }
 
 socket.on('emptyCart', function(data) {

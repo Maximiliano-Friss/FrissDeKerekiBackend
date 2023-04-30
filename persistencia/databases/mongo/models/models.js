@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import bcrypt from 'bcrypt'
 
-//Schema de productos de MongoDB
+//PRODUCTOS
 
 const productosCollection = 'productos';
 
@@ -16,7 +16,7 @@ const ProductoSchema = new mongoose.Schema({
 
 export const productos = mongoose.model(productosCollection, ProductoSchema)
 
-//Schema de usuarios de MongoDB
+//USUARIOS
 
 const usuariosCollection = 'usuarios';
 
@@ -45,7 +45,7 @@ UsuarioSchema.pre('save', function(next) {
 
 export const usuarios = mongoose.model(usuariosCollection, UsuarioSchema)
 
-//Schema de carritos de MongoDB
+//CARRITOS
 
 const carritosCollection = 'carritos';
 

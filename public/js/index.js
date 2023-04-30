@@ -1,7 +1,6 @@
 const socket = io();
 
 //PRODUCTOS
-
 const addToCartBtns = document.querySelectorAll(".addToCart-btn")
 addToCartBtns.forEach(button => {
     button.addEventListener('click', event => {
@@ -26,7 +25,6 @@ addToCartBtns.forEach(button => {
 
 
 //MENSAJES
-
 const schemaAuthor = new normalizr.schema.Entity('author', {}, {idAttribute:'email'})
 const schemaSingleMessage = new normalizr.schema.Entity('singleMessage',{
     author: schemaAuthor

@@ -5,7 +5,6 @@ dotenv.config()
 
 const usersRepo = new UsersRepo()
 
-//PASSPORT AUTH
 export const requireAuth = (req, res, next) => {
     if (req.isAuthenticated()) {
         next()
@@ -15,12 +14,10 @@ export const requireAuth = (req, res, next) => {
 }
 
 export async function passportConfig(passport){
-    //PASSPORT SERIALIZE
     passport.serializeUser((user, done) => {
         done(null, user.email)
     })
     
-    //PASSPORT DESERIALIZE
     passport.deserializeUser( async (email, done) => {
         const user = await usersRepo.findUser(email)
         done(null, user)

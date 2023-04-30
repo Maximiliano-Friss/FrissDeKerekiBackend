@@ -10,7 +10,7 @@ async function twilioSMS(){
     return await client.messages.create({
         body: 'Tu pedido ha sido recibido y ya se encuentra en proceso',
         from: process.env.TWILIO_PHONE,
-        to: process.env.ADMIN_PHONE // Aquí iría to: loggedUser.phone, pero no lo permite dado que estoy usando una cuenta trial en Twilio.
+        to: process.env.ADMIN_PHONE
     })
 }
 

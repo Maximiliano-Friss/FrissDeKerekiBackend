@@ -44,7 +44,6 @@ class MessagesDaoFirebase {
         if(!instance) {
             instance = new MessagesDaoFirebase(name)
         }
-
         return instance
     }
 }

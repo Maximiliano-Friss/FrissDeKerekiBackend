@@ -130,7 +130,6 @@ export function chat(io) {
 export function cart(io) {
     return io.on('connection', async (socket) => {
         let userEmail
-
         socket.on('userEmail', async (message) => {
             userEmail = message;
             try{

@@ -53,7 +53,6 @@ class UsersDaoMongo {
         if(!instance) {
             instance = new UsersDaoMongo(name)
         }
-
         return instance
     }
 }

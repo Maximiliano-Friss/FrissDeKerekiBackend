@@ -33,7 +33,6 @@ app.get('*', (req,res) => {
     res.sendFile(path.join(__dirname, 'public', 'images', '404Error.png')) // Imagen tomada de https://storyset.com
 })
 
-// HANDLEBARS
 app.engine('hbs', handlebars.engine({
     extname: '.hbs',
     defaultLayout: 'index.hbs',
