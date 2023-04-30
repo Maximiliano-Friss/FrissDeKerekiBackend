@@ -1,5 +1,5 @@
 import MessageModel from '../../persistencia/models/messageModel.js';
-import MessagesDaoFirebase from '../../persistencia/DAOs/messagesDaoFirebase.js'
+import MessagesDaoFirebase from '../../persistencia/DAOS/messagesDaoFirebase.js'
 
 export default class MessagesRepo {
     dao
